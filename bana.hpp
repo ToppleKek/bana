@@ -775,6 +775,11 @@ struct BufferReader {
         return ret;
     }
 
+    inline String view_next_line_with_newline() {
+        String ret = view_until_after('\n');
+        return ret;
+    }
+
     inline f32 read_f32() {
         if (!has_more_data()) return 0.0f;
 
